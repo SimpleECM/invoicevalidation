@@ -1,0 +1,202 @@
+{
+    "success": "true",
+    "code": 0,
+    "jobId": "20140410100905775DpXhQfzq",
+    "submission": {
+        "applicationId": "testApp",
+        "input": {
+            "format": "application/pdf",
+            "nImages": 5
+        }
+    },
+    "extractedInvoices": [
+        {
+            "vendor": {
+                "text": "Xin Cube Inc",
+                "confidence": "80",
+                "image": 1,
+                "fieldBounds": {
+                    "left": "225",
+                    "top": "984",
+                    "width": "618",
+                    "height": "169"
+                }
+            },
+            "invoiceId": {
+                "text": "INV13030002",
+                "confidence": "80",
+                "image": 1,
+                "fieldBounds": {
+                    "left": "225",
+                    "top": "984",
+                    "width": "618",
+                    "height": "169"
+                }
+            },
+            "invoiceDate": {
+                "text": "29-May-2013",
+                "confidence": "55",
+                "image": 1,
+                "fieldBounds": {
+                    "left": "225",
+                    "top": "984",
+                    "width": "618",
+                    "height": "169"
+                }
+            },
+            "customField": {
+                "text": "Custom invoice field value",
+                "confidence": "80",
+                "image": 1,
+                "fieldBounds": {
+                    "left": "225",
+                    "top": "984",
+                    "width": "618",
+                    "height": "169"
+                }
+            },
+            "lineItems": [
+                {
+                    "SKU": {
+                        "text": "STK000001",
+                        "confidence": "69",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "Description": {
+                        "text": "APPLE IPAD CASING - WHITE",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "quantity": {
+                        "text": "20",
+                        "confidence": "50",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    }
+                },
+                {
+                    "SKU": {
+                        "text": "STK000002",
+                        "confidence": "56",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "Description": {
+                        "text": "APPLE IPAD CASING - BLACK",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "quantity": {
+                        "text": "20",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    }
+                },
+                {
+                    "SKU": {
+                        "text": "STK000003",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "Description": {
+                        "text": "SAMSUMG GALAXY TAB 10.1' CASING - BLACK",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "quantity": {
+                        "text": "30",
+                        "confidence": "70",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    }
+                },
+                {
+                    "SKU": {
+                        "text": "STK000004",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "Description": {
+                        "text": "SAMSUNG GALAXI TAB 10.1-' CASING - WHITE",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    },
+                    "quantity": {
+                        "text": "30",
+                        "confidence": "80",
+                        "image": 1,
+                        "fieldBounds": {
+                            "left": "225",
+                            "top": "984",
+                            "width": "618",
+                            "height": "169"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

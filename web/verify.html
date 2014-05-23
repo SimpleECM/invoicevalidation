@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+	<!-- Basic Page Needs
+  	================================================== -->
+	<title>Verify Inventory Data</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Verify Invoice Data">
+	<meta name="author" content="Kyle Langlois DCT">
+	
+  	<!-- CSS
+  	================================================== -->
+	<link rel="stylesheet" type="text/css" href="css/ssverify2.css">
+	
+	<!-- JS
+  	================================================== -->
+  	<script type="text/javascript" src="js/jquery.min.js"></script>
+  	<script type="text/javascript" src="js/validation_ui.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<!-- Javascript
+	================================================== -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			VALIDATION_UI_PAGE.initializePage();
+			
+			$('#openModal').on('click', function (e) {
+     			VALIDATION_UI_PAGE.displayValidationUI();
+			});
+			
+			// Supports the functionality of adding new rows to the table			
+			jQuery("table.table-extracted-fields").on('change','input[name^="sku-col"]',function(event){
+				event.preventDefault();
+				VALIDATION_UI_PAGE.addDeleteButtonToPreviousRow();
+					
+				var newRow = VALIDATION_UI_PAGE.addEmptyRowToTable();
+				jQuery('table.table-extracted-fields').append(newRow);
+			});	
+			
+			$('#cancelButton').on('click', function (e) {
+     			VALIDATION_UI_PAGE.hideValidationUI();
+			});
+		});
+		
+	</script>
+</head>
+
+<body>
+
+<div class="center">
+	<p class="header-text"> Validation UI</p>
+	<p>Click the button for validating the data extracted <br><br> <a href="#" id="openModal" class="btn btn-success">Verify Data</a> </p>
+</div>
+
+<div id="validation-ui-main-box" class="modalDialog">
+	<center>
+		<div id="validation-ui-modal" class="round-box verify-modal-size">
+
+			<a href=""><img src="images/close.png" class="x-close"/></a>
+				
+			<table width="900" border="0">
+				<tr>
+					<td align="left" width="360">
+						<img src="images/your-logo-here.png" class="branding-logo">
+						<div id="pdf-viewer"></div>
+					</td>
+					<td>	
+						<table>
+							<tr>
+							   <td>
+									<div class="header-text">Verify Inventory Data</div>
+							   </td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td width="40">
+											<td align="center">Vendor</td>
+											<td align="center">Date</td>
+											<td align="center">Invoice #</td>
+											<td width="60"></td>
+											<td width="30"></td>
+										</tr>
+										<tr>
+											<td align="center" valign="top"></td>
+											<td align="center"><input id="vendor-name" type="text" class="field-vendor"></td>
+											<td align="center"><input id="date" type="text" class="field-date"></td>
+											<td align="center"><input id="invoice-number" type="text" class="field-invoice"></td>
+											<td align="center">
+												<select id="storesSet" class="field-qty">
+													<option value=''>Store</option>
+												</select>            
+											</td>
+											<td></td>
+										</tr>	
+									</table>
+								</td>
+							</tr>
+					
+							<tr>
+							
+								<td>
+									<div class="scrollit">
+									<table id="tableExtractedFields" class="table-extracted-fields">
+										<thead>
+										<tr>
+											<td width="40">
+											<td align="center">SKU</td>
+											<td align="center">Description</td>
+											<td align="center">QTY</td>
+											<td width="30"></td>
+										</tr>
+										</thead>
+									
+											<tbody>
+
+											</tbody>
+										
+									</table>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="sync-submit-cancel">
+										<table width="420">
+											<tr>
+											<td align="right" valign="top">
+													<a href="#" class="no-underline">
+													<img src="images/sync-skus.png"/>                                       	
+													<span class="sync-skus">Sync<br>SKUs</span></a>
+											</td>
+											<td valign="top">
+											</td>
+											<td align="right" valign="top">
+												<a id="sendButton" class="btn disabled">Submit</a>
+											</td>
+											<td align="left" valign="top">&nbsp;
+												<a href="#" id="cancelButton" class="btn btn-danger">Cancel</a>
+											</td>
+											</tr>
+										 </table>                		
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!--Div for displaying confirm message on delete row action-->
+		<div id="confirm-action-delete-row" class="modalDialog"></div>
+		
+	</center>
+</div>
+</body>
+</html>
