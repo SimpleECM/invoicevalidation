@@ -1,5 +1,4 @@
 # Invoice Processing UI #
-==============
 
 Invoice Processing UI is a combination of HTML, CSS, jQuery, JS and a very nice PDF viewer.
 The pdf viewer is done by the project PDF.JS (by Mozilla). 
